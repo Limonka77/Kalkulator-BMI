@@ -1,0 +1,129 @@
+$bg-color: (info:rgb(236, 151, 31), normal:rgb(76, 175, 80), warn:rgb(244, 67, 54));
+$break-small: 420px;
+$break-medium: 760px;
+body {
+    font-family: 'Open Sans', sans-serif;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    height: 100vh;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    color: #adff2f;
+    background-image: url(../Images/bg.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+   
+}
+// 
+.container {
+    position: absolute;
+    top: 20%;
+    background-color: rgba(88, 91, 92, 0.7);
+    width: 50%;
+    fieldset {
+        border: none;
+        width: 100%;
+    }
+    h1 {
+        text-align: center;
+        font-size: 2.5em;
+        margin: 1.8em 0;
+    }
+    .box-bmr-calc {
+        font-size: 1em;
+        font-weight: bold;
+        label {
+            display: inline-block;
+            text-align: right;
+            padding-bottom: .2em;
+            vertical-align: middle;
+            width: 30%;
+        }
+        input {
+            display: inline-block;
+            height: 1.8em;
+            width: 30%;
+            margin-top: .3em;
+            padding: .2em;
+            outline: none;
+            border: 3px solid #54A5DA;
+            background-color: lighten(rgb(236, 54, 54), 40%);
+        }
+    }
+    .btn-calculate {
+        color: #fff;
+        letter-spacing: 1px;
+        outline: none;
+        font-weight: bold;
+        padding: .7em;
+        text-align: center;
+        height: 3em; 
+        margin: 1em;
+        text-transform: uppercase;
+        background-color: rgb(51, 122, 183);
+        border-radius: 15%;
+        border: 0 none;
+        cursor: pointer;
+    }
+    .result-wrapper {
+        display: none;
+    }
+    .alert.info {
+        background-color: map-get($bg-color, info);
+        font-size: 1.5em;
+        font-weight: bold;
+        color: #fff;
+        padding: 1em;
+    }
+    .alert.normal {
+        background-color: map-get($bg-color, normal);
+        font-size: 1.5em;
+        font-weight: bold;
+        color: #fff;
+        padding: 1em;
+    }
+    .alert.warn {
+        background-color: map-get($bg-color, warn);
+        font-size: 1.5em;
+        font-weight: bold;
+        color: #fff;
+        padding: 1em;
+    }
+}
+//media query 
+@media screen and (max-width: $break-small) {
+   .container {
+       position: relative;
+       width: 100%;
+       margin: 0 auto;
+       h1 {
+           font-size: 1.5em;
+       }
+       .alert, .info, .normal, .warn {
+        font-size: 1em;
+       }
+   }
+  }
+
+  @media screen and (min-width: $break-small) and (max-width: $break-medium) {
+    .container {
+        position: relative;
+        width: 80%;
+        //margin: 0 auto;
+        h1 {
+            font-size: 2em;
+        }
+        .alert, .info, .normal, .warn {
+         font-size: 1.2em;
+        }
+    }
+   }
