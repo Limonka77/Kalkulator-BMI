@@ -14,10 +14,8 @@ body {
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
   color: #adff2f;
-  background-image: url(../Images/bg.jpg);
-  background-position: center;
+  background: url(../Images/bg.jpg) center, no-repeat;
   background-size: cover;
-  background-repeat: no-repeat;
 }
 
 .container {
@@ -34,7 +32,6 @@ body {
 
 .container h1 {
   text-align: center;
-  font-size: 2.5em;
   margin: 1.8em 0;
 }
 
@@ -109,8 +106,7 @@ body {
 @media screen and (max-width: 420px) {
   .container {
     position: relative;
-    width: 100%;
-    margin: 0 auto;
+    width: 90%;
   }
   .container h1 {
     font-size: 1.5em;

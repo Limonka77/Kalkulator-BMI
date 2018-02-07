@@ -17,11 +17,8 @@ body {
     -webkit-box-sizing: border-box;
             box-sizing: border-box;
     color: #adff2f;
-    background-image: url(../Images/bg.jpg);
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
-   
+    background: url(../Images/bg.jpg) center, no-repeat;
+   background-size: cover;
 }
 // 
 .container {
@@ -35,7 +32,6 @@ body {
     }
     h1 {
         text-align: center;
-        font-size: 2.5em;
         margin: 1.8em 0;
     }
     .box-bmr-calc {
@@ -103,8 +99,7 @@ body {
 @media screen and (max-width: $break-small) {
    .container {
        position: relative;
-       width: 100%;
-       margin: 0 auto;
+       width: 90%;
        h1 {
            font-size: 1.5em;
        }
@@ -118,7 +113,6 @@ body {
     .container {
         position: relative;
         width: 80%;
-        //margin: 0 auto;
         h1 {
             font-size: 2em;
         }
